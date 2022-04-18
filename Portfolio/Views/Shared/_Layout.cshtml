@@ -23,31 +23,36 @@
     <script src="https://kit.fontawesome.com/c4bc380e37.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/circle-progress.min.js"></script>    
+    <script src="js/circle-progress.min.js"></script>
     <script type="text/javascript">
-      var myFullpage = new fullpage('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage','4thPage', '5thPage', '6thPage','7thPage', '8thPage',],
-        sectionsColor: ['#07C653', '#07C653', '#07C653','#07C653', '#07C653', '#07C653','#07C653', '#07C653'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Home Page', 'About Page', 'Services Page', 'Skills Page', 'Experience Page', 'Education Page', 'Projects Page', 'Contact Page'],
-        afterLoad: function(origin, destination, direction, trigger){
-        var loadedSection = this;
+        var myFullpage = new fullpage('#fullpage', {
+          anchors: ['firstPage', 'secondPage', '3rdPage','4thPage', '5thPage', '6thPage','7thPage', '8thPage',],
+          sectionsColor: ['#07C653', '#07C653', '#07C653','#07C653', '#07C653', '#07C653','#07C653', '#07C653'],
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: ['Home Page', 'About Page', 'Services Page', 'Skills Page', 'Experience Page', 'Education Page', 'Projects Page', 'Contact Page'],
+          afterLoad: function(origin, destination, direction, trigger){
+          var loadedSection = this;
 
-        //using index
-        if(origin.index == 2){
-            $('.progress').addClass('hover');
+          //using index
+          if(origin.index == 2){
+                      $('.progress').addClass('hover');
 
-            $('.circle').circleProgress({
-            startAngle: -Math.PI / 4 * 2,
-            size: 140,
-            thickness: 12,
-            fill:  {color: '#07C653'}
-        }).on('circle-animation-progress', function (event, progress, stepValue) {
-            $(this).find('strong').html(Math.round(100 * stepValue) + '%');
-        });
-        }}});
-</script>
+                      $('.circle').circleProgress({
+                      startAngle: -Math.PI / 4 * 2,
+                      size: 140,
+                      thickness: 12,
+                      fill:  {color: '#07C653'}
+                  }).on('circle-animation-progress', function (event, progress, stepValue) {
+                      $(this).find('strong').html(Math.round(100 * stepValue) + '%');
+                  });
+            }else if(origin.index == 0){
+                $('.about-info').addClass('in-left');
+              } }
+          });
+    </script>
+
+
   
     
     @await RenderSectionAsync("Scripts", required: false)

@@ -57,7 +57,7 @@
     height: 500px;
     background-size: cover;
     transform: translate(50px, -50px);
-    border: 10px solid grey;
+    border: 10px solid white;
 }
 
 .about-info {
@@ -783,10 +783,10 @@ a {
 
 /** fadeInLeft **/
 
-/*@-webkit-keyframes fadeInLeft {
+@-webkit-keyframes fadeInLeft {
     from {
         opacity: 0;
-        -webkit-transform: translatex(-10px);
+        -webkit-transform: translatex(-10px);s
         -moz-transform: translatex(-10px);
         -o-transform: translatex(-10px);
         transform: translatex(-10px);
@@ -854,9 +854,7 @@ a {
     -moz-animation-delay: 1s;
     -o-animation-duration: 1s;
     animation-delay: 1s;
-}*/
-
-
+}
 
 
 /*Mobile Responsive*/
@@ -1015,4 +1013,54 @@ a {
         font-size: 2rem;
         font-weight: bold;
     }
+}
+
+@media(min-width: 992px) {
+    
+    .navbar {
+        padding-bottom: 0px;
+    }
+
+    .riley-photo {
+        height: 80vh;
+        width: 40%;
+    }
+
+    .riley-intro {
+        padding: 0px;
+        padding-left: 100px;
+        padding-top: 100px;
+    }
+
+    .experience h1 {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .experience .experience-row .logo-con {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+    }
+
+    .experience .experience-row .work-desc {
+        width: 400px;
+        height: 160px;
+    }
+
+    .experience .experience-row .logo-con-2 {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+    }
+
+    .check-btn {
+        width: 100px;
+    }
+
+    .experience .experience-row .work-desc-2 {
+        width: 400px;
+        height: 160px;
+    }
+
 }
