@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/fullpage.min.css" />
     <!-- Favicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <meta name="theme-color" content="#7952b3" />
@@ -17,13 +18,27 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="js/fullpage.min.js"></script>
 
     <script src="https://kit.fontawesome.com/c4bc380e37.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/circle-progress.min.js"></script>
-    <script>
-        $('.circle').circleProgress({
+    <script src="js/circle-progress.min.js"></script>    
+    <script type="text/javascript">
+      var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage','4thPage', '5thPage', '6thPage','7thPage', '8thPage',],
+        sectionsColor: ['#07C653', '#07C653', '#07C653','#07C653', '#07C653', '#07C653','#07C653', '#07C653'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Home Page', 'About Page', 'Services Page', 'Skills Page', 'Experience Page', 'Education Page', 'Projects Page', 'Contact Page'],
+        afterLoad: function(origin, destination, direction, trigger){
+        var loadedSection = this;
+
+        //using index
+        if(origin.index == 2){
+            $('.progress').addClass('hover');
+
+            $('.circle').circleProgress({
             startAngle: -Math.PI / 4 * 2,
             size: 140,
             thickness: 12,
@@ -31,7 +46,10 @@
         }).on('circle-animation-progress', function (event, progress, stepValue) {
             $(this).find('strong').html(Math.round(100 * stepValue) + '%');
         });
-    </script>
+        }}});
+</script>
+  
+    
     @await RenderSectionAsync("Scripts", required: false)
 @*</body>
 </html>*@

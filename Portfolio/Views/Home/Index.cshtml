@@ -5,199 +5,212 @@
 }
 
 <body class="bg-black text-white">
-    <main>
-        <header class="top">
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm pt-5 pb-5">
-                <!-- <a class="lg-view nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RILEY HOWLEY</a> -->
-                <a class="nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RHOWLEY</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon me-2"><i class="nav-icon fa-solid fa-bars fa-lg"></i></span>
-                </button>
-                <div class="smenu navbar-collapse collapse social-media">
-                    <ul class="ms-md-auto list-unstyled d-flex justify-content-center mb-0">
-                        <li class="me-5 ms-5">
-                            <a href="" class="text-green"><i class="fa-brands fa-github-square fa-2xl"></i></a>
-                        </li>
-                        <li class="me-5">
-                            <a href="" class="text-green"><i class="fa-brands fa-stack-overflow fa-2xl"></i></a>
-                        </li>
-                        <li class="me-5">
-                            <a href="" class="text-green"><i class="fa-brands fa-discord fa-2xl"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="menu navbar-collapse collapse d-sm-inline-flex">
-                    <ul class="navbar-nav fs-5 me-md-5 pe-md-5 ms-md-auto text-center">
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="">Home</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="#about">About</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="#about">Services</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="#about">Skills</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="#about">Experience</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="#about">Education</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="">Portfolio</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-white" href="">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="banner position-relative">
-                <div class="position-absolute end-0 riley-photo"></div>
-                <div class="position-absolute riley-intro">
-                    <h1 class="intro text-center fw-bold">
-                        <span class="text-green">&lt;b&gt;</span>Hello<span class="text-green">&lt;/b&gt;</span>
-                    </h1>
-                    <h1 class="intro text-center fw-bold">
-                        <span class="text-green">I'm Riley,</span> Full
-                        Stack,<br />Mobile
-                        Developer
-                    </h1>
-                    <div class="buttons d-flex justify-content-center flex-row mt-4 flex-wrap">
-                        <a href="#download"
-                           class="download p-3 pe-5 ps-5 me-3 fs-4 fw-bold text-white btn bg-green">
-                            Download
-                            CV
-                        </a>
-                        <a href="#portfolio" class="works p-3 fs-4 fw-bold btn btn-light">My Work</a>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <div class="about pt-5 text-center position-relative d-flex justify-content-around align-items-center">
-            <div class="image-about-con">
-                <div class="d-flex flex-row mt-4 bg-trasparent pic-bg-about">
-                    <div class="about-photo"></div>
-                </div>
-            </div>
-            <div class="about-info">
-                <h1 id="about" class="about-head text-center fw-bold">About</h1>
-                <hr class="bg-green mx-auto">
-                <div class="para align-items-space-around">
-                    @foreach (var item in Model.AboutModel)
-                    {
-                        <p>@Html.DisplayFor(modelItem => item.Desciption)</p>
-                    }
-                </div>
-            </div>
-        </div>
-        <div class="services p-5 position-relative">
-            <h1 class="d-flex justify-content-center fw-bold">My Services</h1>
-            <hr class="service-hr mx-auto mb-5">
-            <div class="services d-flex justify-content-around flex-wrap">
-                @foreach (var item in Model.ServiceModel)
-                {
-                    <div class="flip-card">
-                        <div class="flip-card-inner position-relative text-center ">
-                            <div class="flip-card-front position-absolute">
-                                <div class="service-container bg-white" style="background-image: url('../Images/Services/@Html.DisplayFor(modelItem => item.BackgroundImage)');"></div>
-                            </div>
-                            <div class="flip-card-back position-absolute">
-                                <h2 class="text-white mt-4">@Html.DisplayFor(modelItem => item.ServicesTitle)</h2>
-                                <p class="text-white">@Html.DisplayFor(modelItem => item.ServicesDescription)</p>
-                                <div class="icons d-flex justify-content-around">
-                                    <i class="devicon-apple-original"></i>
-                                    <i class="devicon-android-plain"></i>
-                                    <i class="devicon-flutter-plain"></i>
-                                </div>
+
+    <main>
+        <div id="fullpage">
+            <section class="section s1">
+                <header class="top">
+                    <nav class="navbar navbar-expand-sm navbar-toggleable-sm pt-5 pb-5">
+                        <!-- <a class="lg-view nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RILEY HOWLEY</a> -->
+                        <a class="nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RHOWLEY</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon me-2"><i class="nav-icon fa-solid fa-bars fa-lg"></i></span>
+                        </button>
+                        <div class="smenu navbar-collapse collapse social-media">
+                            <ul class="ms-md-auto list-unstyled d-flex justify-content-center mb-0">
+                                <li class="me-5 ms-5">
+                                    <a href="" class="text-green"><i class="fa-brands fa-github-square fa-2xl"></i></a>
+                                </li>
+                                <li class="me-5">
+                                    <a href="" class="text-green"><i class="fa-brands fa-stack-overflow fa-2xl"></i></a>
+                                </li>
+                                <li class="me-5">
+                                    <a href="" class="text-green"><i class="fa-brands fa-discord fa-2xl"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu navbar-collapse collapse d-sm-inline-flex">
+                            <ul class="navbar-nav fs-5 me-md-5 pe-md-5 ms-md-auto text-center">
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="">Home</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="#about">About</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="#about">Services</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="#about">Skills</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="#about">Experience</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="#about">Education</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="">Portfolio</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="banner position-relative">
+                        <div class="position-absolute end-0 riley-photo"></div>
+                        <div class="position-absolute riley-intro">
+                            <h1 class="intro text-center fw-bold display-3">
+                                <span class="text-green">&lt;b&gt;</span>Hello<span class="text-green">&lt;/b&gt;</span>
+                            </h1>
+                            <h1 class="intro text-center fw-bold display-3">
+                                <span class="text-green">I'm Riley,</span> Full
+                                Stack,<br />Mobile
+                                Developer
+                            </h1>
+                            <div class="buttons d-flex justify-content-center flex-row mt-4 flex-wrap">
+                                <a href="#download"
+                                   class="download p-3 pe-5 ps-5 me-3 fs-4 fw-bold text-white btn bg-green">
+                                    Download
+                                    CV
+                                </a>
+                                <a href="#portfolio" class="works p-3 fs-4 fw-bold btn btn-light">My Work</a>
                             </div>
                         </div>
                     </div>
-                }
-            </div>
-        </div>
-        <div class="skills-section">
-            <div class="skills-col">
-                <h1 class="text-center fw-bold">My Skills</h1>
-                <hr class="skills-hr mx-auto">
-                <h2 class="text-center fs-4">Technical Skills</h2>
-                <div class="skills-row">
-                    <div class="skills">
-                        @foreach (var item in Model.TechnicalSkillsModel)
+                </header>
+            </section>
 
-
-                            if (item.TechnicalSkillsID % 2 == 0)
-                            {
-                                <div class="col pt-2 pb-2">
-                                    <ul class="bars_list list-unstyled lh-lg">
-                                        <li class="ps-5 pe-5">@Html.DisplayFor(modelItem => item.TechnicalSkillTitle)<span class="float-end">@Html.DisplayFor(modelItem => item.TechnicalSkillPercentage)%</span> </li>
-                                        <li class="pe-5 ps-5">
-                                            <div class="progress border border-secondary bg-transparent">
-                                                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="@item.TechnicalSkillPercentage" aria-valuemin="0" aria-valuemax="100" style="width: @item.TechnicalSkillPercentage%"></div>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            }
+            <section class="section s2">
+                <div class="about pt-5 text-center position-relative d-flex justify-content-around align-items-center">
+                    <div class="image-about-con">
+                        <div class="d-flex flex-row mt-4 bg-trasparent pic-bg-about">
+                            <div class="about-photo"></div>
+                        </div>
                     </div>
-                    <div class="skills">
-                        @foreach (var item in Model.TechnicalSkillsModel)
-                        {
-
-                            if (item.TechnicalSkillsID % 2 != 0)
+                    <div class="about-info">
+                        <h1 id="about" class="about-head text-center fw-bold">About</h1>
+                        <hr class="bg-green mx-auto">
+                        <div class="para align-items-space-around">
+                            @foreach (var item in Model.AboutModel)
                             {
-                                <div class="col pt-2 pb-2">
-                                    <ul class="bars_list list-unstyled lh-lg">
-                                        <li class="ps-5 pe-5"><span class="float-end">@Html.DisplayFor(modelItem => item.TechnicalSkillPercentage)%</span>@Html.DisplayFor(modelItem => item.TechnicalSkillTitle) </li>
-                                        <li class="pe-5 ps-5">
-                                            <div class="progress border border-secondary bg-transparent">
-                                                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="@item.TechnicalSkillPercentage" aria-valuemin="0" aria-valuemax="100" style="width: @item.TechnicalSkillPercentage%"></div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <p>@Html.DisplayFor(modelItem => item.Desciption)</p>
                             }
-                        }
+                        </div>
                     </div>
                 </div>
-                <h2 class="text-center fs-4 soft">Soft Skills</h2>
-                <div class="circle-con d-flex justify-content-around">
-
-                    @foreach (var item in Model.SoftSkillsModel)
-                    {
-                        if (item.SoftSkillsID % 2 == 0)
+            </section>
+            <section class="section s3">
+                <div class="services pt-5 position-relative">
+                    <h1 class="d-flex justify-content-center fw-bold">My Services</h1>
+                    <hr class="service-hr mx-auto mb-4">
+                    <div class="d-flex justify-content-around flex-wrap">
+                        @foreach (var item in Model.ServiceModel)
                         {
-                            <div class="col-md-3 col-sm-6">
-                            <h3 class="text-center">@Html.DisplayFor(modelItem => item.SoftSkillTitle)</h3>
-                            <div class="circle" data-value="0.@Html.DisplayFor(modelItem => item.SoftSkillpercentage)"><strong></strong></div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner position-relative text-center ">
+                                    <div class="flip-card-front position-absolute">
+                                        <div class="service-container bg-white" style="background-image: url('../Images/Services/@Html.DisplayFor(modelItem => item.BackgroundImage)');"></div>
+                                    </div>
+                                    <div class="flip-card-back position-absolute">
+                                        <h2 class="text-white mt-4">@Html.DisplayFor(modelItem => item.ServicesTitle)</h2>
+                                        <p class="text-white">@Html.DisplayFor(modelItem => item.ServicesDescription)</p>
+                                        <div class="icons d-flex justify-content-around">
+                                            <i class="devicon-apple-original"></i>
+                                            <i class="devicon-android-plain"></i>
+                                            <i class="devicon-flutter-plain"></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         }
-                        
-                    }
+                    </div>
                 </div>
+            </section>
+            <section class="section s4">
+                <div class="skills-section">
+                    <div class="skills-col">
+                        <h1 class="text-center fw-bold pt-5">My Skills</h1>
+                        <hr class="skills-hr mx-auto">
+                        <h2 class="text-center fs-4">Technical Skills</h2>
+                        <div class="skills-row">
+                            <div class="skills">
+                                @foreach (var item in Model.TechnicalSkillsModel)
 
-                <div class="circle-con d-flex justify-content-around">
 
-                    @foreach (var item in Model.SoftSkillsModel)
-                    {
-                        if (item.SoftSkillsID % 2 != 0)
-                        {
-                            <div class="col-md-3 col-sm-6">
-                            <h3 class="text-center">@Html.DisplayFor(modelItem => item.SoftSkillTitle)</h3>
-                            <div class="circle" data-value="0.@Html.DisplayFor(modelItem => item.SoftSkillpercentage)"><strong></strong></div>
+                                    if (item.TechnicalSkillsID % 2 == 0)
+                                    {
+                                        <div class="col pt-2 pb-2">
+                                            <ul class="bars_list list-unstyled lh-lg">
+                                                <li class="ps-5 pe-5">@Html.DisplayFor(modelItem => item.TechnicalSkillTitle)<span class="float-end">@Html.DisplayFor(modelItem => item.TechnicalSkillPercentage)%</span> </li>
+                                                <li class="pe-5 ps-5">
+                                                    <div class="progress border border-secondary bg-transparent">
+                                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="@item.TechnicalSkillPercentage" aria-valuemin="0" aria-valuemax="100" style="width: @item.TechnicalSkillPercentage%"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    }
                             </div>
-                        }
-                        
-                    }
-                </div>
+                            <div class="skills">
+                                @foreach (var item in Model.TechnicalSkillsModel)
+                                {
 
-            </div>
+                                    if (item.TechnicalSkillsID % 2 != 0)
+                                    {
+                                        <div class="col pt-2 pb-2">
+                                            <ul class="bars_list list-unstyled lh-lg">
+                                                <li class="ps-5 pe-5"><span class="float-end">@Html.DisplayFor(modelItem => item.TechnicalSkillPercentage)%</span>@Html.DisplayFor(modelItem => item.TechnicalSkillTitle) </li>
+                                                <li class="pe-5 ps-5">
+                                                    <div class="progress border border-secondary bg-transparent">
+                                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="@item.TechnicalSkillPercentage" aria-valuemin="0" aria-valuemax="100" style="width: @item.TechnicalSkillPercentage%"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <h2 class="text-center fs-4 soft">Soft Skills</h2>
+                        <div class="circle-con d-flex justify-content-around">
+
+                            @foreach (var item in Model.SoftSkillsModel)
+                            {
+                                if (item.SoftSkillsID % 2 == 0)
+                                {
+                                    <div class="col-md-3 col-sm-6">
+                                        <h3 class="text-center">@Html.DisplayFor(modelItem => item.SoftSkillTitle)</h3>
+                                        <div class="circle" data-value="0.@Html.DisplayFor(modelItem => item.SoftSkillpercentage)"><strong></strong></div>
+                                    </div>
+                                }
+
+                            }
+                        </div>
+
+                        <div class="circle-con d-flex justify-content-around">
+
+                            @foreach (var item in Model.SoftSkillsModel)
+                            {
+                                if (item.SoftSkillsID % 2 != 0)
+                                {
+                                    <div class="col-md-3 col-sm-6">
+                                        <h3 class="text-center">@Html.DisplayFor(modelItem => item.SoftSkillTitle)</h3>
+                                        <div class="circle" data-value="0.@Html.DisplayFor(modelItem => item.SoftSkillpercentage)"><strong></strong></div>
+                                    </div>
+                                }
+
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="section s5">
             <div class="experience">
                 <h1 class="text-center fw-bold">Experience</h1>
                 <hr class="experience-hr mx-auto">
@@ -242,6 +255,8 @@
                     }
                 }
             </div>
+            </section>
+            <section class="section s6">
             <div class="education">
                 <h1 class="text-center fw-bold">Education</h1>
                 <hr class="education-hr mx-auto">
@@ -318,57 +333,163 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="portfolio">
-            <h1 class="text-center fw-bold">Portfolio</h1>
-            <hr class="portfolio-hr mx-auto">
-            <div class="projects ms-auto me-auto">
-                <div class="row mx-auto">
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                        <div class="bg-white rounded shadow-sm">
-                            <img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt=""
-                                 class="img-fluid card-img-top">
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Red paint cup</a></h5>
-                                <p class="small text-muted mb-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-                                    <p class="small mb-0">
-                                        <i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span>
+            </div>
+            </section>
+            <section class="section s7">
+            <div class="portfolio">
+                <h1 class="text-center fw-bold">Portfolio</h1>
+                <hr class="portfolio-hr mx-auto">
+                <div class="projects ms-auto me-auto">
+                    <div class="row mx-auto">
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                            <div class="bg-white rounded shadow-sm">
+                                <img src="https://bootstrapious.com/i/snippets/sn-gallery/img-1.jpg" alt=""
+                                     class="img-fluid card-img-top">
+                                <div class="p-4">
+                                    <h5> <a href="#" class="text-dark">Red paint cup</a></h5>
+                                    <p class="small text-muted mb-0">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit
                                     </p>
-                                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+                                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                                        <p class="small mb-0">
+                                            <i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span>
+                                        </p>
+                                        <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <a href="" class="view-all d-flex justify-content-center text-white">View All Projects</a>
                 </div>
-                <a href="" class="view-all d-flex justify-content-center text-white">View All Projects</a>
             </div>
-        </div>
-        <div class="contact">
-            <div class="contact-us">
-                <h1 class="pt-4">Get in Contact</h1>
-                <hr class="contact-hr mx-auto">
-                <hr width="80%" size="1">
+            </section>
+            <section class="section s8 ftco-section">
+                <div class="container mx-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="wrapper mx-auto">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 d-flex align-items-stretch">
+                                        <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
+                                            <h2 class="mb-4">Contact information</h2>
+                                            <p class="mb-5">Contact me any time to discuss Products or to consider Hiring Me!</p>
+
+                                            <div class="links">
+                                                <div class="dbox w-100 d-flex align-items-center">
+                                                    <div class="icon d-flex align-items-center justify-content-center">
+                                                        <span class="fa fa-phone"></span>
+                                                    </div>
+                                                    <div class="text pl-3">
+                                                        <p><span>Phone:</span> <a class="text-green" href="tel://1234567920">027 391 0007</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="dbox w-100 d-flex align-items-center">
+                                                    <div class="icon d-flex align-items-center justify-content-center">
+                                                        <span class="fa fa-paper-plane"></span>
+                                                    </div>
+                                                    <div class="text pl-3">
+                                                        <p><span>Email:</span> <a class="text-green" href="mailto:howleyriley@gmail.com">howleyriley@gmail.com</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="dbox w-100 d-flex align-items-center">
+                                                    <div class="icon d-flex align-items-center justify-content-center">
+                                                        <span class="fa fa-globe"></span>
+                                                    </div>
+                                                    <div class="text pl-3">
+                                                        <p><span>Website</span> <a class="text-green" href="#">www.rileyhowley.co.nz</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                                            <h2 class="mb-4">Contact Me</h2>
+                                            <div id="form-message-warning" class="mb-4"></div>
+                                            <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                                <div class="row">
+                                                    <div class="col-md-12 mt-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-3">
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-3">
+                                                        <div class="form-group">
+                                                            <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-3">
+                                                        <div class="form-group">
+                                                            <input type="submit" value="Send Message" class="btn-contact btn-primary">
+                                                            <div class="submitting"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer-basic">
+                <footer>
+                    <div class="social"><a href="#"><i class="text-green fa-brands fa-github-square fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-stack-overflow fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-discord fa-xl"></i></a></div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Home</a></li>
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Services</a></li>
+                        <li class="list-inline-item"><a href="#">Skills</a></li>
+                        <li class="list-inline-item"><a href="#">Experience</a></li>
+                        <li class="list-inline-item"><a href="#">Education</a></li>
+                        <li class="list-inline-item"><a href="#">Portfolio</a></li>
+                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                    </ul>
+                    <p class="copyright">Riley Howley © 2022</p>
+                </footer>
             </div>
-            <div class="contact-col d-flex align-items-center">
-                <form action="https://formsubmit.co/howleyriley@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Enter Your Name: " required>
-                    <input type="email" name="email" placeholder="Enter Your Email Address: " required>
-                    <input type="tel" name="phone" placeholder="Enter Your Phone Number: " required>
-                    <textarea rows="4" name="message" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn-send">Send Message</button>
-                </form>
-            </div>
+
 
         </div>
     </main>
+
+
+    <div class="intro-a">
+        <div class="intro-text-a">
+            <h1 class="hide">
+                <span class="text-a">I am the <span class="diff">FUTURE</span> of</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text-a"><span class="diff">SOFTWARE</span> Development</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+
+
     <script src="js/bootstrap.min.js"></script>
     <script src="./js/circle-progress.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+            crossorigin="anonymous"></script>
+    <script src="~/js/fullpage.min.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
