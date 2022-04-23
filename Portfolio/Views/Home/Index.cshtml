@@ -346,7 +346,7 @@
                                 @foreach(var item in Model.ProjectsModel)
                                 {
                                     <div class="bg-green rounded shadow-sm">
-                                <img src="../wwwroot/Images/" alt="Project Image"
+                                <img src="../wwwroot/Images/Projects/@item.BackgroundImage" alt="Project Image"
                                      class="img-fluid card-img-top">
                                 <div class="p-4">
                                     <h5> <a href="#" class="text-dark">@Html.DisplayFor(modelItem => item.Title)</a></h5>
@@ -354,16 +354,22 @@
                                         @Html.DisplayFor(modelItem => item.Description)
                                     </p>
                                     <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-                                        <p class="small mb-0">
+                                        
                                             if(@Html.DisplayFor(modelItem => item.DeviceCompatable) == "Mobile"){
+                                                <p class="small mb-0">
                                                 <i class="fa-solid fa-mobile-notch"></i><span class="font-weight-bold">Mobile</span>
+                                                </p>
                                             } else if(@Html.DisplayFor(modelItem => item.DeviceCompatable) == "Web"){
+                                                <p class="small mb-0">
                                                 <i class="fa-solid fa-browser"></i><span class="font-weight-bold">Web</span>
+                                                </p>
                                             } else {
+                                                <p class="small mb-0">
                                                 <i class="fa-solid fa-database"></i>><span class="font-weight-bold">API / Database</span>
+                                                </p>
                                             }
                                             
-                                        </p>
+                                        
                                         <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
                                     </div>
                                 </div>
