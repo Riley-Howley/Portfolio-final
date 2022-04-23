@@ -786,7 +786,7 @@ a {
 @-webkit-keyframes fadeInLeft {
     from {
         opacity: 0;
-        -webkit-transform: translatex(-10px);s
+        -webkit-transform: translatex(-10px);
         -moz-transform: translatex(-10px);
         -o-transform: translatex(-10px);
         transform: translatex(-10px);
@@ -1065,11 +1065,3 @@ a {
 
 }
 
-
-@media(min-width: 1200px) {
-    .riley-intro {
-        padding-top: 300px;
-        padding-left: 200px;
-    }
-
-}
