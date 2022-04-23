@@ -1064,3 +1064,12 @@ a {
     }
 
 }
+
+
+@media(min-width: 1200px) {
+    .riley-intro {
+        padding-top: 300px;
+        padding-left: 200px;
+    }
+
+}
