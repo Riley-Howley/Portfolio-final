@@ -1028,7 +1028,7 @@ a {
 
     .riley-intro {
         padding: 0px;
-        padding-left: 100px;
+        padding-left: 200px;
         padding-top: 100px;
     }
 
@@ -1063,5 +1063,12 @@ a {
         height: 160px;
     }
 
+}
+
+@media(min-width: 2000px) {
+    .riley-intro {
+        padding-top: 300px;
+        padding-left: 300px;
+    }
 }
 
