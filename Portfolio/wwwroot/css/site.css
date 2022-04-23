@@ -1038,19 +1038,19 @@ a {
     }
 
     .experience .experience-row .logo-con {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         background-size: contain;
     }
 
     .experience .experience-row .work-desc {
-        width: 400px;
-        height: 160px;
+        width: 600px;
+        height: 200px;
     }
 
     .experience .experience-row .logo-con-2 {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         background-size: contain;
     }
 
@@ -1059,8 +1059,8 @@ a {
     }
 
     .experience .experience-row .work-desc-2 {
-        width: 400px;
-        height: 160px;
+        width: 600px;
+        height: 200px;
     }
 
 }
