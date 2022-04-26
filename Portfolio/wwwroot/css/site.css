@@ -1042,12 +1042,12 @@ a {
     }
 
     .services h1 {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     .experience h1 {
         padding: 0px;
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     .experience .experience-row .logo-con {
@@ -1077,7 +1077,7 @@ a {
     }
 
     .portfolio h1 {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
 }
