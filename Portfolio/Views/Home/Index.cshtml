@@ -76,8 +76,7 @@
                                    class="download p-3 pe-5 ps-5 me-3 fs-4 fw-bold text-white btn bg-green">
                                     Download
                                     CV
-                                </a>
-                                <a href="#portfolio" class="works p-3 fs-4 fw-bold btn btn-light">My Work</a>
+                                </a>                               
                             </div>
                         </div>
                     </div>
@@ -211,179 +210,186 @@
                 </div>
             </section>
             <section class="section s5">
-            <div class="experience">
-                <h1 class="text-center fw-bold">Experience</h1>
-                <hr class="experience-hr mx-auto">
-                @foreach (var item in Model.ExperienceModel)
-                {
-                    if (item.IsPosLeft)
+                <div class="experience">                    
+                    <h1 class="text-center fw-bold">Experience</h1>
+                    <hr class="experience-hr mx-auto">
+                    @foreach (var item in Model.ExperienceModel)
                     {
-                        <div class="experience-row d-flex justify-content-center">
-                            <div class="logo-con" style="background-image: url(@Html.DisplayFor(modelItem => item.LogoImage));"></div>
-                            <div class="work-desc align-self-center">
-                                <div class="work-years">
-                                    <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
-                                    <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
-                                    <p class="text-white text-center ps-4">
-                                        @Html.DisplayFor(modelItem => item.Description)
-                                    </p>
-                                    <div class="d-flex flex-row mt-4 justify-content-center">
-                                        <a href="@Html.DisplayFor(modelItem => item.WebsiteURl)" class="btn bg-green text-white">Check Them Out</a>
+                        if (item.IsPosLeft)
+                        {
+                            <div class="experience-row d-flex justify-content-center align-content-center">
+                                <div class="logo-con" style="background-image: url(@Html.DisplayFor(modelItem => item.LogoImage));"></div>
+                                <div class="work-desc align-self-center">
+                                    <div class="work-years">
+                                        <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
+                                        <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
+                                        <p class="text-white text-center ps-4">
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </p>
+                                        <div class="d-flex flex-row mt-4 justify-content-center ">
+                                            <a href="@Html.DisplayFor(modelItem => item.WebsiteURl)" class="btn bg-green text-white">Check Them Out</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="experience-row d-flex justify-content-center">
-                            <div class="work-desc-2 align-self-center">
-                                <div class="work-years">
-                                    <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
-                                    <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
-                                    <p class="text-white text-center pe-4">
-                                        @Html.DisplayFor(modelItem => item.Description)
-                                    </p>
-                                    <div class="d-flex flex-row mt-4 justify-content-center">
-                                        <a href="@Html.DisplayFor(modelItem => item.WebsiteURl)" class="btn bg-green text-white">Check Them Out</a>
+                        }
+                        else
+                        {
+                            <div class="experience-row d-flex justify-content-center align-content-center">
+                                <div class="work-desc-2 align-self-center">
+                                    <div class="work-years">
+                                        <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
+                                        <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
+                                        <p class="text-white text-center pe-4">
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </p>
+                                        <div class="d-flex flex-row mt-4 justify-content-center">
+                                            <a href="@Html.DisplayFor(modelItem => item.WebsiteURl)" class="btn bg-green text-white">Check Them Out</a>
 
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="logo-con-2" style="background-image: url('@Html.DisplayFor(modelItem => item.LogoImage)');"></div>
                             </div>
-                            <div class="logo-con-2" style="background-image: url('@Html.DisplayFor(modelItem => item.LogoImage)');"></div>
-                        </div>
+                        }
                     }
-                }
-            </div>
+                    </div>
             </section>
             <section class="section s6">
-            <div class="education">
-                <h1 class="text-center fw-bold">Education</h1>
-                <hr class="education-hr mx-auto">
-                <div class="row example-centered d-flex justify-content-center mx-auto">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                        <ul class="timeline timeline-centered">
-                            <li class="timeline-item period">
-                                <div class="timeline-info"></div>
-                                <div class="timeline-content">
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title text-green fw-bold">
-                                        Year One Bachelor of Information
-                                        Technology 2020
-                                    </h3>
-                                    <p>
-                                        ITC 501 - Information Technology Operations<br>
-                                        ITC 502 - Fundamentals of Programming and Problem Solving<br>
-                                        ITC 503 - Professional Practice<br>
-                                        ITC 504 - Enterprise<br>
-                                        ITC 505 - Introduction to Networks<br>
-                                        ITC 506 - Operating Systems<br>
-                                        ITC 509 - Web Applications Implementations<br>
-                                        ITC 513 - Programming<br>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-info">
-                                </div>
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title text-green fw-bold">
-                                        Year Two Bachelor of Information
-                                        Technology 2021
-                                    </h3>
-                                    <p>
-                                        ITC 601 - Project Management<br>
-                                        ITC 604 - Systems Analysis and Design<br>
-                                        IT 606 - Object Oriented Databases<br>
-                                        ITC 607 - Data Management<br>
-                                        ITC 605 - Web Services and Design Methodologies<br>
-                                        ITC 617 - Mobile Application Development<br>
-                                        IT 608 - Game Development<br>
-                                        IT 607 - Advanced Programming<br>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-info">
-                                </div>
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title text-green fw-bold">
-                                        Year Three Bachelor of Information
-                                        Technology 2022
-                                    </h3>
-                                    <p>
-                                        ITC 601 - Project Management<br>
-                                        ITC 604 - Systems Analysis and Design<br>
-                                        IT 606 - Object Oriented Databases<br>
-                                        ITC 607 - Data Management<br>
-                                        ITC 605 - Web Services and Design Methodologies<br>
-                                        ITC 617 - Mobile Application Development<br>
-                                        IT 608 - Game Development<br>
-                                        IT 607 - Advanced Programming<br>
-                                    </p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            </section>
-            <section class="section s7">
-            <div class="portfolio">
-                <h1 class="text-center fw-bold">Portfolio</h1>
-                <hr class="portfolio-hr mx-auto">
-                <div class="projects ms-auto me-auto">
-                    <div class="row mx-auto">
-                        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                @foreach(var item in Model.ProjectsModel)
-                                {
-                                    <div class="bg-green rounded shadow-sm">
-                                <img src="../wwwroot/Images/Projects/@item.BackgroundImage" alt="Project Image"
-                                     class="img-fluid card-img-top">
-                                <div class="p-4">
-                                    <h5> <a href="#" class="text-dark">@Html.DisplayFor(modelItem => item.Title)</a></h5>
-                                    <p class="small text-muted mb-0">
-                                        @Html.DisplayFor(modelItem => item.Description)
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-                                        
-                                            if(@Html.DisplayFor(modelItem => item.DeviceCompatable) == "Mobile"){
-                                                <p class="small mb-0">
-                                                <i class="fa-solid fa-mobile-notch"></i><span class="font-weight-bold">Mobile</span>
-                                                </p>
-                                            } else if(@Html.DisplayFor(modelItem => item.DeviceCompatable) == "Web"){
-                                                <p class="small mb-0">
-                                                <i class="fa-solid fa-browser"></i><span class="font-weight-bold">Web</span>
-                                                </p>
-                                            } else {
-                                                <p class="small mb-0">
-                                                <i class="fa-solid fa-database"></i>><span class="font-weight-bold">API / Database</span>
-                                                </p>
-                                            }
-                                            
-                                        
-                                        <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+                <div class="education">
+                    <h1 class="text-center fw-bold">Education</h1>
+                    <hr class="education-hr mx-auto">
+                    <div class="row example-centered d-flex justify-content-center mx-auto">
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                            <ul class="timeline timeline-centered">
+                                <li class="timeline-item period">
+                                    <div class="timeline-info"></div>
+                                    <div class="timeline-content">
                                     </div>
-                                </div>
-                            </div>
-                                }
-                                
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title text-green fw-bold">
+                                            Year One Bachelor of Information
+                                            Technology 2020
+                                        </h3>
+                                        <p>
+                                            ITC 501 - Information Technology Operations<br>
+                                            ITC 502 - Fundamentals of Programming and Problem Solving<br>
+                                            ITC 503 - Professional Practice<br>
+                                            ITC 504 - Enterprise<br>
+                                            ITC 505 - Introduction to Networks<br>
+                                            ITC 506 - Operating Systems<br>
+                                            ITC 509 - Web Applications Implementations<br>
+                                            ITC 513 - Programming<br>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title text-green fw-bold">
+                                            Year Two Bachelor of Information
+                                            Technology 2021
+                                        </h3>
+                                        <p>
+                                            ITC 601 - Project Management<br>
+                                            ITC 604 - Systems Analysis and Design<br>
+                                            IT 606 - Object Oriented Databases<br>
+                                            ITC 607 - Data Management<br>
+                                            ITC 605 - Web Services and Design Methodologies<br>
+                                            ITC 617 - Mobile Application Development<br>
+                                            IT 608 - Game Development<br>
+                                            IT 607 - Advanced Programming<br>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title text-green fw-bold">
+                                            Year Three Bachelor of Information
+                                            Technology 2022
+                                        </h3>
+                                        <p>
+                                            ITC 601 - Project Management<br>
+                                            ITC 604 - Systems Analysis and Design<br>
+                                            IT 606 - Object Oriented Databases<br>
+                                            ITC 607 - Data Management<br>
+                                            ITC 605 - Web Services and Design Methodologies<br>
+                                            ITC 617 - Mobile Application Development<br>
+                                            IT 608 - Game Development<br>
+                                            IT 607 - Advanced Programming<br>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
-                    <a href="" class="view-all d-flex justify-content-center text-white">View All Projects</a>
+
                 </div>
-            </div>
+            </section>
+            <section class="section s7">
+                <div class="portfolio">
+                    <h1 class="text-center fw-bold">Portfolio</h1>
+                    <hr class="portfolio-hr mx-auto">
+                    <div class="projects ms-auto me-auto">
+                        <div class="row mx-auto">
+                            @foreach (var item in Model.ProjectsModel)
+                            {
+                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+
+                                    <div class="bg-green rounded shadow-sm">
+                                        <img src="./Images/Projects/@item.BackgroundImage" style="width: 1200px; height:300px" alt="Project Image"
+                                         class="img-fluid card-img-top">
+                                        <div class="p-4">
+                                            <h5> <a href="@item.GitHubLink" class="text-dark fw-bolder">@Html.DisplayFor(modelItem => item.Title)</a></h5>
+                                            <p class="small mb-0 text-black">
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </p>
+                                            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
+
+
+                                                @if (item.DeviceCompatable == "Web")
+                                                {
+                                                    <p class="small mb-0">
+                                                        <span class="font-weight-bold">Website</span>
+                                                    </p>
+                                                    <i class="fa-solid fa-window-maximize"></i>
+                                                }
+                                                else if (item.DeviceCompatable == "Mobile")
+                                                {
+                                                    <p class="small mb-0">
+                                                        <span class="font-weight-bold">Mobile Application</span>
+                                                    </p>
+                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                                }
+                                                else
+                                                {
+                                                    <p class="small mb-0">
+                                                        <span class="font-weight-bold">API / Database</span>
+                                                    </p>
+                                                    <i class="fa-solid fa-database"></i>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="section s8 ftco-section">
-                <div class="container mx-auto">
+                <div class="container mx-auto pb-5">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="wrapper mx-auto">
@@ -464,23 +470,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="footer-basic">
+                    <footer>
+                        <div class="social"><a href="#"><i class="text-green fa-brands fa-github-square fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-stack-overflow fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-discord fa-xl"></i></a></div>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">Home</a></li>
+                            <li class="list-inline-item"><a href="#">About</a></li>
+                            <li class="list-inline-item"><a href="#">Services</a></li>
+                            <li class="list-inline-item"><a href="#">Skills</a></li>
+                            <li class="list-inline-item"><a href="#">Experience</a></li>
+                            <li class="list-inline-item"><a href="#">Education</a></li>
+                            <li class="list-inline-item"><a href="#">Portfolio</a></li>
+                            <li class="list-inline-item"><a href="#">Contact</a></li>
+                        </ul>
+                        <p class="copyright">Riley Howley © 2022</p>
+                    </footer>
+                </div>
             </section>
-            <div class="footer-basic">
-                <footer>
-                    <div class="social"><a href="#"><i class="text-green fa-brands fa-github-square fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-stack-overflow fa-xl"></i></a><a href="#"><i class="text-green fa-brands fa-discord fa-xl"></i></a></div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Home</a></li>
-                        <li class="list-inline-item"><a href="#">About</a></li>
-                        <li class="list-inline-item"><a href="#">Services</a></li>
-                        <li class="list-inline-item"><a href="#">Skills</a></li>
-                        <li class="list-inline-item"><a href="#">Experience</a></li>
-                        <li class="list-inline-item"><a href="#">Education</a></li>
-                        <li class="list-inline-item"><a href="#">Portfolio</a></li>
-                        <li class="list-inline-item"><a href="#">Contact</a></li>
-                    </ul>
-                    <p class="copyright">Riley Howley © 2022</p>
-                </footer>
-            </div>
+
 
 
         </div>

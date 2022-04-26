@@ -141,7 +141,7 @@
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../Images/footer_lodyas.png");
     background-repeat: repeat;
-    min-height: 100vh;
+    min-height: 120vh;
     position: relative;
 }
 
@@ -224,6 +224,10 @@
     background-repeat: repeat;
     min-height: 100vh;
     position: relative;
+}
+
+.experience-content {
+    height: 80vh;
 }
 
     .experience h1 {
@@ -548,12 +552,16 @@ a {
     }
 
     .portfolio .projects {
-        width: 80%;
+        width: 80%;       
     }
+
+    .portfolio .small {
+        font-weight: 500;
+    }
+
 /*Contact*/
 .ftco-section {
-    padding: 7em 0;
-    background-image: url("../Images/footer_lodyas.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../Images/footer_lodyas.png");
     background-repeat: repeat;
 }
 
@@ -674,7 +682,8 @@ a {
 /*Footer*/
 
 .footer-basic {
-    padding: 40px 0;
+    padding: 40px;
+    margin-bottom: 0px;
     background-color: black;
     color: #4b4c4d;
 }
@@ -1029,12 +1038,16 @@ a {
     .riley-intro {
         padding: 0px;
         padding-left: 200px;
-        padding-top: 100px;
+        padding-top: 10%;
+    }
+
+    .services h1 {
+        padding-top: 10%;
     }
 
     .experience h1 {
         padding: 0px;
-        padding-top: 10px;
+        padding-top: 10%;
     }
 
     .experience .experience-row .logo-con {
@@ -1061,6 +1074,10 @@ a {
     .experience .experience-row .work-desc-2 {
         width: 600px;
         height: 200px;
+    }
+
+    .portfolio h1 {
+        padding-top: 10%;
     }
 
 }
