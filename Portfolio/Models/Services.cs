@@ -8,6 +8,8 @@ namespace Portfolio.Models
         public string BackgroundImage { get; set; }
         public string ServicesTitle { get; set; }
         public string ServicesDescription { get; set; }
-        //public List<string> Icons { get; set; }
+        public string Icon1 { get; set; }
+        public string Icon2 { get; set; }
+        public string Icon3 { get; set; }
     }
 }

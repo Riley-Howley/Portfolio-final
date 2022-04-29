@@ -112,15 +112,15 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner position-relative text-center ">
                                     <div class="flip-card-front position-absolute">
-                                        <div class="service-container bg-white" style="background-image: url('../Images/Services/@Html.DisplayFor(modelItem => item.BackgroundImage)');"></div>
+                                        <div class="service-container bg-white" style="background-image: url('../Images/Services/@Html.DisplayFor(modelItem => item.BackgroundImage)'); background-size: cover"></div>
                                     </div>
                                     <div class="flip-card-back position-absolute">
                                         <h2 class="text-white mt-4">@Html.DisplayFor(modelItem => item.ServicesTitle)</h2>
                                         <p class="text-white">@Html.DisplayFor(modelItem => item.ServicesDescription)</p>
                                         <div class="icons d-flex justify-content-around">
-                                            <i class="devicon-apple-original"></i>
-                                            <i class="devicon-android-plain"></i>
-                                            <i class="devicon-flutter-plain"></i>
+                                            <i class="@item.Icon1"></i>
+                                            <i class="@item.Icon2"></i>
+                                            <i class="@item.Icon3"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -222,8 +222,8 @@
                                 <div class="work-desc align-self-center">
                                     <div class="work-years">
                                         <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
-                                        <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
-                                        <p class="text-white text-center ps-4">
+                                        <h4 class="text-green fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
+                                        <p class="text-white text-center">
                                             @Html.DisplayFor(modelItem => item.Description)
                                         </p>
                                         <div class="d-flex flex-row mt-4 justify-content-center ">
@@ -239,8 +239,8 @@
                                 <div class="work-desc-2 align-self-center">
                                     <div class="work-years">
                                         <h4 class="text-white fw-bold text-center pt-3">@Html.DisplayFor(modelItem => item.Title)</h4>
-                                        <h4 class="text-white fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
-                                        <p class="text-white text-center pe-4">
+                                        <h4 class="text-green fw-bold text-center pt-1">@Html.DisplayFor(modelItem => item.Dates)</h4>
+                                        <p class="text-white text-center">
                                             @Html.DisplayFor(modelItem => item.Description)
                                         </p>
                                         <div class="d-flex flex-row mt-4 justify-content-center">

@@ -226,6 +226,12 @@
     position: relative;
 }
 
+    .experience p {
+        text-justify: inter-word;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
 .experience-content {
     height: 80vh;
 }
@@ -241,8 +247,8 @@
     }
 
     .experience .experience-row .logo-con {
-        width: 340px;
-        height: 340px;
+        width: 640px;
+        height: 640px;
         background-color: white;
         background-image: url("../Images/Logos/vnet.jpg");
         background-position: center;
@@ -252,15 +258,15 @@
     }
 
     .experience .experience-row .work-desc {
-        width: 800px;
-        height: 250px;
+        width: 1200px;
+        height: 850px;
         background-color: #4B4A4A;
         transform: translate(-20px, 0px);
     }
 
     .experience .experience-row .logo-con-2 {
-        width: 340px;
-        height: 340px;
+        width: 640px;
+        height: 640px;
         background-color: white;
         background-image: url("../Images/Logos/ds.jpg");
         background-position: center;
@@ -274,8 +280,8 @@
 }
 
 .experience .experience-row .work-desc-2 {
-    width: 800px;
-    height: 250px;
+    width: 1200px;
+    height: 850px;
     background-color: #4B4A4A;
     transform: translate(20px, 0px);
 }
@@ -584,7 +590,7 @@ a {
 }
 
 .contact-wrap {
-    background: #272a34;
+    background: black;
 }
 
     .contact-wrap h3 {
@@ -1017,6 +1023,12 @@ a {
         font-size: 1rem;
     }
 
+    .experience p {
+        text-justify: inter-word;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     .diff {
         color: rgb(49, 247, 0);
         font-size: 2rem;
@@ -1049,31 +1061,46 @@ a {
         padding: 0px;
         padding-top: 5%;
     }
+    
 
     .experience .experience-row .logo-con {
-        width: 250px;
-        height: 250px;
-        background-size: contain;
+        width: 440px;
+        height: 440px;
+        background-color: white;
+        background-image: url("../Images/Logos/vnet.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 40px;
+        z-index: 9;
     }
 
     .experience .experience-row .work-desc {
-        width: 600px;
-        height: 200px;
+        width: 800px;
+        height: 350px;
+        background-color: #4B4A4A;
+        transform: translate(-20px, 0px);
     }
 
     .experience .experience-row .logo-con-2 {
-        width: 250px;
-        height: 250px;
-        background-size: contain;
+        width: 440px;
+        height: 440px;
+        background-color: white;
+        background-image: url("../Images/Logos/ds.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 40px;
+        z-index: 9;
     }
 
     .check-btn {
-        width: 100px;
+        width: 200px;
     }
 
     .experience .experience-row .work-desc-2 {
-        width: 600px;
-        height: 200px;
+        width: 800px;
+        height: 350px;
+        background-color: #4B4A4A;
+        transform: translate(20px, 0px);
     }
 
     .portfolio h1 {
