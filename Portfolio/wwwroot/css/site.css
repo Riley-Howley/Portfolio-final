@@ -10,6 +10,11 @@
     position: relative;
 }
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../Images/footer_lodyas.png");
+    background-repeat: repeat;
+}
+
 .text-green {
     color: #07C653;
 }
@@ -741,124 +746,115 @@ a {
 }
 
 /*Contact*/
-.ftco-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../Images/footer_lodyas.png");
-    background-repeat: repeat;
+
+.text-black {
+    color: #000;
 }
 
-.ftco-no-pt {
-    padding-top: 0;
+.content {
+    padding: 7rem 0;
 }
 
-.ftco-no-pb {
-    padding-bottom: 0;
+.heading {
+    font-size: 2.5rem;
+    font-weight: 900;
 }
 
 .form-control {
-    height: 52px;
-    background: transparent;
-    color: rgba(255,255,255,.8) !important;
-    font-size: 14px;
-    border-radius: 0px;
-    box-shadow: none !important;
-    border: 1px solid rgba(255,255,255,.2);
-}
-
-.contact-wrap {
-    background: black;
-}
-
-    .contact-wrap h3 {
-        color: white;
-    }
-
-.info-wrap {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), #272a34;
-}
-
-    .info-wrap h3 {
-        color: rgba(255,255,255,1);
-        font-size: 18px;
-        position: relative;
-    }
-
-    .info-wrap .dbox {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-
-    .info-wrap p {
-        margin: 0;
-    }
-
-        .info-wrap p span {
-            font-weight: 400;
-            color: white;
-        }
-
-    .info-wrap .icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: rgba(255,255,255,.02);
-        color: #07C653;
-        margin-right: 15px;
-    }
-
-        .info-wrap .icon .span {
-            font-size: 20px;
-            color: white;
-        }
-
-
-.form-group {
-    display: flex;
-    justify-content: center;
-}
-
-.btn-contact {
-    padding: 12px 16px;
-    cursor: pointer;
-    border-width: 1px;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 60px;
-    border-radius: 15px;
-    background: #07C653;
-    border-color: #07C653;
-    font-size: 16px;
-}
-
-    .btn-contact:hover {
-        transform: scale(1.2);
-        background-color: #191919;
-        border-color: #07C653;
-    }
-
-.contactForm .form-control {
     border: none;
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    padding: 0;
+    background: #f3f3f3;
 }
 
-    .contactForm .form-control:focus {
-        background: transparent;
-        border-color: rgba(255,255,255,.5);
+    .form-control:active, .form-control:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #000;
+        background: #f3f3f3;
     }
 
-.wrapper {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), #272a34;
-    border: hidden;
-    border-radius: 15px;
+.col-form-label {
+    color: #000;
 }
 
-.links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.btn, .form-control, .custom-select {
+    height: 50px;
 }
+
+    .custom-select:active, .custom-select:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #000;
+    }
+
+.btn {
+    border: none;
+    border-radius: 4px !important;
+}
+
+    .btn.btn-primary {
+        background: #000;
+        color: #fff;
+        padding: 15px 20px;
+    }
+
+    .btn:hover {
+        color: #fff;
+    }
+
+    .btn:active, .btn:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.box {
+    padding: 40px;
+    background: #fff;
+    -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+}
+
+    .box h3 {
+        font-size: 14px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+label.error {
+    font-size: 12px;
+    color: red;
+}
+
+#message {
+    resize: vertical;
+}
+
+#form-message-warning, #form-message-success {
+    display: none;
+}
+
+#form-message-warning {
+    color: #B90B0B;
+}
+
+#form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+}
+
 
 /*Footer*/
 
