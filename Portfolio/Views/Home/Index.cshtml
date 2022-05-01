@@ -12,7 +12,6 @@
             <section class="section s1">
                 <header class="top">
                     <nav class="navbar navbar-expand-sm navbar-toggleable-sm pt-5 pb-2">
-                        <!-- <a class="lg-view nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RILEY HOWLEY</a> -->
                         <a class="nav-h1 navbar-brand text-white ms-5 me-auto fs-1" href="#">RHOWLEY</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +75,7 @@
                                    class="download p-3 pe-5 ps-5 me-3 fs-4 fw-bold text-white btn bg-green">
                                     Download
                                     CV
-                                </a>                               
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +209,7 @@
                 </div>
             </section>
             <section class="section s5">
-                <div class="experience">                    
+                <div class="experience">
                     <h1 class="text-center fw-bold">Experience</h1>
                     <hr class="experience-hr mx-auto">
                     @foreach (var item in Model.ExperienceModel)
@@ -253,7 +252,7 @@
                             </div>
                         }
                     }
-                    </div>
+                </div>
             </section>
             <section class="section s6">
                 <div class="education">
@@ -336,54 +335,64 @@
                 </div>
             </section>
             <section class="section s7">
-                <div class="portfolio">
-                    <h1 class="text-center fw-bold">Portfolio</h1>
-                    <hr class="portfolio-hr mx-auto">
-                    <div class="projects ms-auto me-auto">
-                        <div class="row mx-auto">
-                            @foreach (var item in Model.ProjectsModel)
-                            {
-                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-
-                                    <div class="bg-green rounded shadow-sm">
-                                        <img src="./Images/Projects/@item.BackgroundImage" style="width: 1200px; height:300px" alt="Project Image"
-                                         class="img-fluid card-img-top">
-                                        <div class="p-4">
-                                            <h5> <a href="@item.GitHubLink" class="text-dark fw-bolder">@Html.DisplayFor(modelItem => item.Title)</a></h5>
-                                            <p class="small mb-0 text-black">
-                                                @Html.DisplayFor(modelItem => item.Description)
-                                            </p>
-                                            <div class="d-flex align-items-center justify-content-between rounded-pill bg-dark px-3 py-2 mt-4">
-
-
-                                                @if (item.DeviceCompatable == "Web")
-                                                {
-                                                    <p class="small mb-0">
-                                                        <span class="font-weight-bold">Website</span>
-                                                    </p>
-                                                    <i class="fa-solid fa-window-maximize"></i>
-                                                }
-                                                else if (item.DeviceCompatable == "Mobile")
-                                                {
-                                                    <p class="small mb-0">
-                                                        <span class="font-weight-bold">Mobile Application</span>
-                                                    </p>
-                                                    <i class="fa-solid fa-mobile-screen-button"></i>
-                                                }
-                                                else
-                                                {
-                                                    <p class="small mb-0">
-                                                        <span class="font-weight-bold">API / Database</span>
-                                                    </p>
-                                                    <i class="fa-solid fa-database"></i>
-                                                }
-                                            </div>
+                <div class="portfolio">                    
+                    <div class="container">
+                        <h1 class="text-center fw-bold">Projects</h1>
+                        <hr class="portfolio-hr mx-auto">
+                        <div class="carousel mx-auto">
+                            <input type="radio" name="slides" checked="checked" id="slide-1">
+                            <input type="radio" name="slides" id="slide-2">
+                            <input type="radio" name="slides" id="slide-3">
+                            <input type="radio" name="slides" id="slide-4">
+                            <input type="radio" name="slides" id="slide-5">
+                            <input type="radio" name="slides" id="slide-6">
+                            <ul class="carousel__slides">
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            
                                         </div>
-                                    </div>
-
-
-                                </div>
-                            }
+                                        <figcaption>
+                                                                                        
+                                        </figcaption>                                        
+                                    </figure>
+                                    <h2 class="fw-bold">Velocity Technician Management</h2>
+                                    <a>Click Me Bitch</a>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                           
+                                        </div>
+                                        <figcaption>
+                                            <h2 class="fw-bold">Velocity Technician Management</h2>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            
+                                        </div>
+                                        <figcaption>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            <span class="credit">Photo: Steve Carter</span>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                
+                            </ul>
+                            <ul class="carousel__thumbnails">
+                                <li>
+                                    <label for="slide-1"><img src="~/Images/Projects/vtm.png" alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-2"><img src="~/Images/Projects/powersms.png" alt=""></label>
+                                </li>
+                                <li>
+                                    <label for="slide-3"><img src="~/Images/Projects/wendon.png" alt=""></label>
+                                </li>                          
+                            </ul>
                         </div>
                     </div>
                 </div>
