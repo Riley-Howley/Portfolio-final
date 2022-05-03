@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Models;
+using PortfolioAPI.Models;
 
 namespace PortfolioAPI.Data
 {
@@ -26,5 +27,7 @@ namespace PortfolioAPI.Data
         public DbSet<Portfolio.Models.Experience> Experience { get; set; }
 
         public DbSet<Portfolio.Models.Projects> Projects { get; set; }
+
+        public DbSet<PortfolioAPI.Models.Contact> Contact { get; set; }
     }
 }

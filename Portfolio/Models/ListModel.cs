@@ -8,6 +8,7 @@
         public IList<SoftSkills> SoftSkillsModel { get; set; }
         public IList<Experience> ExperienceModel { get; set; }
         public IList<Projects> ProjectsModel { get; set; }
+        public IList<Contact> ContactModel { get; set; }
 
     }
 }

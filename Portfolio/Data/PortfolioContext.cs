@@ -26,5 +26,6 @@ namespace Portfolio.Data
         public DbSet<Portfolio.Models.SoftSkills> SoftSkills { get; set; }
 
         public DbSet<Portfolio.Models.TechnicalSkills> TechnicalSkills { get; set; }
+        public DbSet<Portfolio.Models.Contact> Contact { get; set; }
     }
 }
