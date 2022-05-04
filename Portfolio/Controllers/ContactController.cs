@@ -23,7 +23,8 @@ namespace Portfolio.Controllers
         // GET: Contact
         public async Task<IActionResult> Index()
         {
-            return View(await _context.About.ToListAsync());
+            return View();
+            //return View(await _context.About.ToListAsync());
         }
 
         // GET: Contact/Details/5
@@ -34,8 +35,8 @@ namespace Portfolio.Controllers
                 return NotFound();
             }
 
-            var about = await _context.About
-                .FirstOrDefaultAsync(m => m.AboutId == id);
+            var about = await _context.Contact
+                .FirstOrDefaultAsync(m => m.ContactID == id);
             if (about == null)
             {
                 return NotFound();
@@ -47,6 +48,7 @@ namespace Portfolio.Controllers
         // GET: Contact/Create
         public IActionResult Create()
         {
+
             return View();
         }
 
@@ -74,12 +76,12 @@ namespace Portfolio.Controllers
                 return NotFound();
             }
 
-            var about = await _context.About.FindAsync(id);
-            if (about == null)
+            var contact = await _context.Contact.FindAsync(id);
+            if (contact == null)
             {
                 return NotFound();
             }
-            return View(about);
+            return View(contact);
         }
 
         
@@ -91,14 +93,14 @@ namespace Portfolio.Controllers
                 return NotFound();
             }
 
-            var about = await _context.About
-                .FirstOrDefaultAsync(m => m.AboutId == id);
-            if (about == null)
+            var contact = await _context.Contact
+                .FirstOrDefaultAsync(m => m.ContactID == id);
+            if (contact == null)
             {
                 return NotFound();
             }
 
-            return View(about);
+            return View(contact);
         }
 
         // POST: Contact/Delete/5
@@ -106,15 +108,15 @@ namespace Portfolio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var about = await _context.About.FindAsync(id);
-            _context.About.Remove(about);
+            var contact = await _context.Contact.FindAsync(id);
+            _context.Contact.Remove(contact);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AboutExists(int id)
         {
-            return _context.About.Any(e => e.AboutId == id);
+            return _context.Contact.Any(e => e.ContactID == id);
         }
     }
 }

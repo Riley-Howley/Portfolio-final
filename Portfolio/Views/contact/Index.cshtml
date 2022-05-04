@@ -1,0 +1,37 @@
+﻿@model Portfolio.Models.Contact
+<form asp-controller="Contact" asp-action="Create" class="mb-5">
+                                            <div class="row">
+                                                <div class="col-md-12 form-group pb-2 pt-1">
+                                                    <label asp-for="ContactName" class="control-label"></label>
+                                                    <input asp-for="ContactName" class="form-control" />
+                                                    <span asp-validation-for="ContactName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 form-group pb-2 pt-1">
+                                                    <label asp-for="ContactEmail" class="control-label"></label>
+                                                    <input asp-for="ContactEmail" class="form-control" />
+                                                    <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 form-group pb-2 pt-1">
+                                                    <label asp-for="Subject" class="control-label"></label>
+                                                    <input asp-for="Subject" class="form-control" />s
+                                                    <span asp-validation-for="Subject" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 form-group pb-2 pt-1">
+                                                    <label asp-for="Message" class="control-label"></label>
+                                                    <input asp-for="Message" class="form-control" />
+                                                    <span asp-validation-for="Message" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 pb-2 d-flex justify-content-center">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                                                    <span class="submitting"></span>
+                                                </div>
+                                            </div>
+                                        </form>
