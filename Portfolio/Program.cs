@@ -4,8 +4,10 @@ using Portfolio.Data;
 using Portfolio.Models;
 var builder = WebApplication.CreateBuilder(args);
 
+var ConnectionString = builder.Configuration.GetConnectionString("PortfolioSql");
+
 builder.Services.AddDbContext<PortfolioContext>(options =>
-  options.UseMySql(builder.Configuration.GetConnectionString("PortfolioMySql"), new MySqlServerVersion(new Version(8, 0, 22))));
+    options.UseSqlite(ConnectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

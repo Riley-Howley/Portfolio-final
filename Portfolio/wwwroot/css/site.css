@@ -4,7 +4,7 @@
 }
 /*Header*/
 .top {
-    background-image: url("../images/footer_lodyas.png");
+    background-image: url("../Images/footer_lodyas.png");
     background-repeat: repeat;
     min-height: 100vh;
     position: relative;
@@ -946,7 +946,7 @@ label.error {
 
 .slider {
     background: #07C653;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
