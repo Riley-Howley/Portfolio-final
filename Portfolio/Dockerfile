@@ -16,7 +16,7 @@ RUN dotnet build "Portfolio.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "Portfolio.csproj" -c Release -o /app/publish
 
-COPY "/Portfolio/db/MyWebSite.db" "/app/publish/"
+COPY "/Portfolio/db" "/app/publish/db"
 
 FROM base AS final
 WORKDIR /app
